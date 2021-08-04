@@ -1,3 +1,3 @@
 # project.balls
-Repository of a project working with shapes and animation.
-🟣🟣🔵🟢 First attemp to animate a 2D shape with Java Script.
+This Repository contains my first working project with shapes and animation in X/Y axis.
+    🟣🟣🔵🟢 First attemp to animate a 2D shape with Java Script.
