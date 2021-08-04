@@ -1,0 +1,63 @@
+
+<div id="ball" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:rgb(167, 245, 167)"></div>
+
+<script>
+
+var ball = document.getElementById('ball');
+var xposition = 0;
+var yposition =0;
+var xvelocity = 20;
+var xreverse = false;
+var yreverse = false;
+function moveBallTotal(){
+  ball.style.left = moveBallX() + 'px';
+  ball.style.top = moveBallY() + 'px';
+  ball.style.background = "rgb(200, 0, 250)";
+  console.log (ball.style.left);
+};
+function moveBallX(){
+    let xMax = 500;
+    let xMin = 0;
+      if(!xreverse){
+        xposition = xposition + xvelocity;
+        console.log(xposition);
+      }else{
+        xposition = xposition - xvelocity;
+        console.log(xposition);
+      }
+      if(xposition > xMax || xposition == xMin){
+        xreverse=!xreverse;
+      }
+    return xposition;
+  };
+ 
+  function moveBallY(){
+    let yMax = 500;
+    let yMin = 0;
+      if(!yreverse){
+        yposition = yposition + xvelocity;
+        console.log(yposition);
+      }else{
+        yposition = yposition - xvelocity;
+        console.log(yposition);
+      }
+      if(yposition > yMax || yposition == yMin){
+        yreverse=!yreverse;
+      }
+    return yposition;
+  };
+ 
+  console.log("moveballX:"+ moveBallX());
+  setInterval (moveBallTotal,200);
+
+// YOUR CODE 
+// ----------------
+</script>
